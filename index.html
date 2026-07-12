@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayu Akbar | Specialist Marketplace & E-Commerce</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection { background-color: #dbeafe; color: #1e3a8a; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .profile-shadow {
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 1), 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-[#FAFAFA] text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 glass-nav bg-white/80 border-b border-slate-200" data-aos="fade-down" data-aos-duration="800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tight text-slate-900">
+                Bayu<span class="text-brand-600">Akbar.</span>
+            </a>
+            <div class="space-x-8 hidden md:flex items-center">
+                <a href="#tentang" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Tentang</a>
+                <a href="#portofolio" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Portofolio</a>
+                <a href="#pengalaman" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Pengalaman</a>
+                <a href="#keterampilan" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Keterampilan</a>
+                <a href="#kontak" class="text-sm font-semibold text-white bg-slate-900 px-5 py-2 rounded-full hover:bg-brand-600 transition-all shadow-md">Hubungi Saya</a>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Section (Desain 2 Kolom Profesional) -->
+    <section id="tentang" class="relative pt-32 md:pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8">
+        
+        <!-- BAGIAN KIRI: Teks & Pekerjaan -->
+        <div class="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+            
+            <!-- Badge Open to Work -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 font-bold shadow-sm mb-6">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
+                </span>
+                <span class="tracking-wide text-sm">OPEN TO WORK</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
+                Profesional E-Commerce & <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-500">Marketplace Specialist.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-500 mb-8 max-w-2xl font-medium leading-relaxed">
+                Halo, saya <span class="text-slate-900 font-bold">Bayu Akbar</span>. Profesional dengan pengalaman 4 tahun terbukti dalam memimpin operasional retail, mengelola administrasi e-commerce yang terstruktur, hingga mengoptimasi efisiensi periklanan digital untuk mencapai target bisnis perusahaan<span class="hidden">[cite: 3]</span>.
+            </p>
+
+            <!-- Roles Tags (Dibuat lebih rapi dan ringkas) -->
+            <div class="flex flex-wrap justify-center md:justify-start gap-2.5 mb-10">
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 shadow-sm cursor-default">E-Commerce Manager</span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 shadow-sm cursor-default">Performance Marketing</span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 shadow-sm cursor-default">Marketplace / KAM</span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 shadow-sm cursor-default">Retail Ops Coordinator<span class="hidden">[cite: 3]</span></span>
+                <span class="px-3 py-1.5 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 shadow-sm cursor-default">Data Analyst</span>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#portofolio" class="bg-brand-600 text-white px-8 py-3.5 rounded-full font-semibold hover:bg-brand-700 transition-all shadow-lg flex items-center justify-center">
+                    Lihat Portofolio Saya
+                </a>
+                <a href="#pengalaman" class="bg-white text-slate-700 border border-slate-200 px-8 py-3.5 rounded-full font-semibold hover:bg-slate-50 transition-all flex items-center justify-center">
+                    Jelajahi Profil & Karir
+                </a>
+            </div>
+        </div>
+
+        <!-- BAGIAN KANAN: Foto Profil -->
+        <div class="w-full md:w-2/5 flex justify-center md:justify-end" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="relative">
+                <!-- Efek cahaya (glow) dekoratif di belakang foto -->
+                <div class="absolute -inset-4 bg-gradient-to-tr from-brand-100 to-indigo-50 rounded-full blur-2xl opacity-70"></div>
+                
+                <!-- Ganti src dengan nama file foto Anda -->
+                <img src="foto-bayu.jpg.png" 
+                     alt="Bayu Akbar" 
+                     class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-white shadow-2xl hover:scale-105 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTOFOLIO SECTION -->
+    <section id="portofolio" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-3 block">Showcase Portofolio</span>
+                <h2 class="text-4xl font-extrabold mb-4 text-slate-900 tracking-tight">Karya & Pencapaian</h2>
+                <p class="text-lg text-slate-500">Bukti nyata eksekusi strategi periklanan dan otomatisasi data yang menghasilkan skala bisnis terukur.</p>
+            </div>
+
+            <!-- KATEGORI 1: PERFORMANCE MARKETING -->
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-8 border-b border-slate-100 pb-4" data-aos="fade-right">
+                    <span class="p-3 bg-brand-50 text-brand-600 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+                    </span>
+                    <div>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Performance Marketing (Ads)</h3>
+                        <p class="text-slate-500 text-sm mt-1">Mengelola 14 akun Ads Marketplace di 12 cabang berbeda.</p>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Ads Card 1: Shopee -->
+                    <div data-aos="fade-up" class="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-64 bg-slate-100 overflow-hidden flex items-center justify-center">
+                            <img src="SHOPEE-ADS.png" alt="Shopee Ads" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                        <div class="p-8">
+                            <span class="inline-block px-3 py-1 bg-orange-100 text-orange-600 text-xs font-bold uppercase rounded-full mb-4">Shopee Ads</span>
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">Skala Penjualan Shopee</h4>
+                            <p class="text-slate-500 mb-6 text-sm">Optimasi periklanan produk Shopee selama 3 bulan. Menghasilkan puluhan ribu pesanan dengan biaya akuisisi yang sangat efisien.</p>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-1">ROAS</p>
+                                    <p class="text-emerald-600 font-black text-xl">17,55</p>
+                                </div>
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-1">Penjualan Iklan</p>
+                                    <p class="text-slate-900 font-black text-xl">Rp 961+ Juta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ads Card 2: Tokopedia / TikTok -->
+                    <div data-aos="fade-up" data-aos-delay="100" class="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-64 bg-slate-100 overflow-hidden flex items-center justify-center">
+                        <img src="TIKTOK-ADS.png" alt="Shopee Ads" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <span class="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-bold uppercase rounded-full mb-4">Tokopedia & TikTok</span>
+                            <h4 class="text-xl font-bold text-slate-900 mb-2">Performa Multi-Platform</h4>
+                            <p class="text-slate-500 mb-6 text-sm">Strategi distribusi budget yang tepat menghasilkan 18.7k produk terjual hanya dengan pengeluaran iklan Rp 54.7 juta.</p>
+                            
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 col-span-2">
+                                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-1">Efisiensi Biaya Iklan</p>
+                                    <div class="flex items-end gap-2">
+                                        <p class="text-brand-600 font-black text-xl">Rp 54.7 Juta</p>
+                                        <p class="text-slate-500 text-sm mb-1 line-through">vs</p>
+                                        <p class="text-emerald-600 font-bold text-lg">Hasil Rp 961 Juta</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- KATEGORI 2: DATA & DASHBOARD -->
+            <div>
+                <div class="flex items-center gap-4 mb-8 border-b border-slate-100 pb-4" data-aos="fade-right">
+                    <span class="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    </span>
+                    <div>
+                        <h3 class="text-2xl font-extrabold text-slate-900">Data Analytics & Dashboards</h3>
+                        <p class="text-slate-500 text-sm mt-1">Pembuatan sistem otomatis melalui App Script & AI untuk performa cabang.</p>
+                    </div>
+                </div>
+
+                <!-- BUNGKUS GRID UTAMA UNTUK KEEMPAT DASHBOARD -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Dashboard 1 -->
+                    <div data-aos="fade-up" class="group flex flex-col bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-lg transition-all">
+                         <div class="relative h-64 bg-slate-100 overflow-hidden flex items-center justify-center">
+                        <img src="PRICING.png" alt="Shopee Ads" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">1. Dashboard Konsolidasi Cabang</h4>
+                            <p class="text-sm text-slate-500 mb-4">Sistem pelacakan analitik operasional terpusat untuk memantau kinerja konsolidasi semua cabang.</p>
+                            <div class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-2 rounded-lg w-fit">
+                                📊 Skala Transaksi: Rp 14.9 Miliar
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard 2 -->
+                    <div data-aos="fade-up" data-aos-delay="100" class="group flex flex-col bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-lg transition-all">
+                        <div class="relative h-52 bg-slate-100 overflow-hidden flex items-center justify-center">
+                            <!-- Masukkan tag <img> Anda di sini, hapus span -->
+                            <span class="text-slate-400 font-medium text-sm z-10">[ Gambar Price Intelligence ]</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">2. HijrahFood Price Intelligence</h4>
+                            <p class="text-sm text-slate-500 mb-4">Dashboard data input untuk mengecek harga kompetitor utama pada produk sebagai patokan ide promo.</p>
+                            <div class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-blue-600 bg-blue-50 px-3 py-2 rounded-lg w-fit">
+                                🛒 Indeks Daya Saing Harga: 8%
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard 3 -->
+                    <div data-aos="fade-up" class="group flex flex-col bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-lg transition-all">
+                        <div class="relative h-52 bg-slate-100 overflow-hidden flex items-center justify-center">
+                            <!-- Masukkan tag <img> Anda di sini, hapus span -->
+                            <span class="text-slate-400 font-medium text-sm z-10">[ Tempat Gambar Performa Toko ]</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">3. Dashboard Performa Store Leader</h4>
+                            <p class="text-sm text-slate-500 mb-4">Visualisasi performa toko bulanan untuk memudahkan Store Leader dan Admin menganalisis metrik penjualan di setiap marketplace.</p>
+                            <div class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-purple-600 bg-purple-50 px-3 py-2 rounded-lg w-fit">
+                                📈 Tracking Multi-Marketplace
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard 4 -->
+                    <div data-aos="fade-up" data-aos-delay="100" class="group flex flex-col bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-lg transition-all">
+                        <div class="relative h-52 bg-slate-100 overflow-hidden flex items-center justify-center">
+                            <!-- Masukkan tag <img> Anda di sini, hapus span -->
+                            <span class="text-slate-400 font-medium text-sm z-10">[ Tempat Gambar Mapping Lokasi ]</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col">
+                            <h4 class="font-bold text-lg text-slate-900 mb-2">4. Geospatial Mapping Meta Ads</h4>
+                            <p class="text-sm text-slate-500 mb-4">Analisis wilayah dan pemetaan lokasi pelanggan Shopee untuk dieksekusi sebagai target presisi Meta Ads.</p>
+                            <div class="mt-auto inline-flex items-center gap-2 text-xs font-bold text-orange-600 bg-orange-50 px-3 py-2 rounded-lg w-fit">
+                                📍 612 Data Wilayah Terpetakan
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- AKHIR BUNGKUS GRID UTAMA -->
+            </div>      
+
+    <!-- PENGALAMAN KARIR SECTION (DENGAN LOGO SLOT) -->
+    <section id="pengalaman" class="py-24 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 data-aos="fade-up" class="text-3xl font-extrabold mb-16 text-center text-slate-900 tracking-tight">Pengalaman Profesional</h2>
+            
+            <div class="relative border-l-[3px] border-slate-200 ml-4 md:ml-8 space-y-12">
+                
+                <!-- PT. Hijrah Gizi Hewani - Role 1 -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-5 h-5 bg-white border-[5px] border-brand-500 rounded-full -left-[11px] top-1.5 ring-4 ring-slate-50 group-hover:scale-110 transition-transform"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold rounded-md mb-5">Agustus 2025 - Saat ini</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <!-- Tempat Logo -->
+                            <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="logo hf (1).jpg" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Specialist Marketplace & Merchandiser</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">PT. Hijrah Gizi Hewani - Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-brand-500 mr-3 mt-0.5 font-bold">✓</span>
+                                <span>Mengelola dan mengoptimalkan performa toko perusahaan di berbagai platform online marketplace, berhasil meningkatkan total penjualan di platform Shopee sebesar 50-60%<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-500 mr-3 mt-0.5 font-bold">✓</span>
+                                <span>Merancang dan mengeksekusi strategi kampanye periklanan digital (Marketplace Ads), sukses mencapai efisiensi Return on Ad Spend (ROAS) di angka 16 hingga 18<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-500 mr-3 mt-0.5 font-bold">✓</span>
+                                <span>Menganalisa data penjualan, tren pasar, dan metrik performa e-commerce untuk menyusun laporan serta memberikan rekomendasi strategi bisnis kepada manajemen<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-500 mr-3 mt-0.5 font-bold">✓</span>
+                                <span>Memastikan standar layanan pelanggan online yang prima dengan merespons interaksi pelanggan, menangani komplain, dan menjaga reputasi toko digital<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-500 mr-3 mt-0.5 font-bold">✓</span>
+                                <span>Menjalin dan memelihara kerja sama strategis dengan pihak eksternal, termasuk Relationship Manager (RM) dari Tokopedia, GrabMart, Blibli, Qpon, serta mitra lainnya<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-500 mr-3 mt-0.5 font-bold">✓</span>
+                                <span>Mengelola dan mengoptimasi program Affiliate Marketing secara aktif guna mendatangkan traffic tambahan<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-6 pt-5 border-t border-slate-100 bg-amber-50/50 -mx-8 -mb-8 p-8 rounded-b-2xl">
+                            <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-md mb-2">🏆 Penghargaan</span>
+                            <p class="text-[15px] text-slate-800 font-semibold">Karyawan Terbaik 1 (The Best Employee I) <span class="font-normal text-slate-600">atas kinerja luar biasa meliputi Merchandising & Retail Support selama periode Juli - Desember 2025</span><span class="hidden">[cite: 3]</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PT. Hijrah Gizi Hewani - Role 2 -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1.5 ring-4 ring-slate-50 group-hover:bg-brand-400 transition-colors"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-md mb-5">Jan 2025 - Agustus 2025</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                             <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="logo hf (1).jpg" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Store Leader</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">PT. Hijrah Gizi Hewani - Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Memimpin operasional toko harian, memastikan kelancaran proses penjualan, pelayanan, dan manajemen stok sesuai SOP<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Mengelola dan mengawasi tim beranggotakan 10 karyawan, termasuk penjadwalan, pelatihan, dan evaluasi kinerja<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Mengelola stok barang: melakukan kontrol stok, pengadaan barang, dan analisis <em>fast & slow moving product</em><span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Bertanggung jawab atas pencapaian target penjualan bulanan dan KPI, serta membuat laporan dan berpartisipasi dalam perencanaan promosi<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PT. Hijrah Gizi Hewani - Role 3 -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1.5 ring-4 ring-slate-50 group-hover:bg-brand-400 transition-colors"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-md mb-5">Agustus 2024 - Jan 2025</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                             <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="logo hf (1).jpg" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Asisten Store Leader</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">PT. Hijrah Gizi Hewani - Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Mendukung Store Leader dalam pengelolaan operasional sehari-hari, termasuk pengaturan stok dan penataan produk<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Menyediakan pelayanan pelanggan yang berkualitas, membantu pelatihan tim, dan memastikan produktivitas kerja<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Menegakkan kebijakan perusahaan, prosedur keselamatan, menjaga standar operasional, serta menyusun laporan inventaris<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- PT. Hijrah Gizi Hewani - Role 4 -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1.5 ring-4 ring-slate-50 group-hover:bg-brand-400 transition-colors"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-md mb-5">Mei 2023 - Agust 2024</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                             <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="logo hf (1).jpg" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Admin Online (Retail)</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">PT. Hijrah Gizi Hewani - Jakarta, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Mengelola pesanan marketplace seperti Shopee, Tokopedia dan Blibli sebanyak ±200 orderan<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Menjaga performa marketplace dengan respon cepat, menangani keluhan, memperbarui stok dan promo, serta membuat rekapan harian<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Membantu warehouse dalam pencarian item di gudang dan melakukan Stock Opname 2x selama 1 bulan<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Raja Bubuk Nusantara -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1.5 ring-4 ring-slate-50 group-hover:bg-brand-400 transition-colors"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-md mb-5">Okt 2022 - Mei 2023</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                             <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="rajabubuk.jpg" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Coordinator Wilayah dan Marketing</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">PT. Raja Bubuk Nusantara - Karawang, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Memastikan target penjualan per bulan seluruh store tercapai dan berhasil mencapai 80% target dari 5 store<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Monitoring SOP karyawan, kontrol inventory, merekap Stock Opname bulanan, serta melakukan sidak seluruh store<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Melakukan promosi via marketplace & media sosial, membuat PO perlengkapan, serta memberikan penawaran ke brand minuman<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CV Indo Javaland -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1.5 ring-4 ring-slate-50 group-hover:bg-brand-400 transition-colors"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-md mb-5">Mei 2021 - Okt 2022</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                         <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="JAVALAND.png" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Cordinator Store dan Admin Online</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">CV. Indo Javaland - Cikarang, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Bertanggung jawab dalam proses penjualan store, memberikan arahan, dan mengontrol karyawan<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Melakukan tracking dan layanan customer service media sosial, merekap pesanan, serta memeriksa barang PO dari pusat<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Bertanggung jawab atas laporan penjualan harian, Stock Opname, dan eksekusi promosi peningkatan penjualan<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Toko Grosir Barasaki -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-slate-300 rounded-full -left-[9px] top-1.5 ring-4 ring-slate-50 group-hover:bg-brand-400 transition-colors"></div>
+                    <div class="ml-10 md:ml-14 bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-md mb-5">Agust 2019 - Agust 2020</span>
+                        
+                        <!-- Header with Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                           <div class="w-14 h-14 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center shrink-0 overflow-hidden relative group-hover:border-brand-300 transition-colors">
+                             <img src="BARASAKI.jpg" alt="HijrahFood" class="w-full h-full object-contain p-1">
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-1 leading-tight">Admin Gudang dan Crew Store</h3>
+                                <p class="text-slate-500 font-medium text-sm md:text-base">Toko Grosir Barasaki - Padang, Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="space-y-3 text-[15px] text-slate-600">
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Bertanggung jawab atas bongkar muat barang di gudang, perhitungan fisik harian, memproses pesanan pasokan, dan laporan stok<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-400 mr-3 mt-0.5">▹</span>
+                                <span>Bertanggung jawab atas transaksi kasir (arus uang), membantu pelanggan mencari produk, serta pemajangan barang di area penjualan<span class="hidden">[cite: 3]</span>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KETERAMPILAN SECTION (HARD SKILLS & SOFT SKILLS) -->
+    <section id="keterampilan" class="py-24 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-extrabold mb-4 text-slate-900 tracking-tight">Keterampilan & Keahlian</h2>
+                <p class="text-lg text-slate-500">Kombinasi kemampuan teknis operasional dan interpersonal yang kuat untuk memimpin tim dan mencapai target bisnis.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Hard Skills -->
+                <div data-aos="fade-right" class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="text-brand-600 bg-brand-100 p-2 rounded-lg">⚙️</span> Hard Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Marketplace (Shopee, Tokopedia, Blibli, Lazada)<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Social Media (Facebook, Instagram)<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Marketing Strategy<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-brand-600 text-white border-transparent rounded-lg text-sm font-bold shadow-sm">Meta Ads, Shopee Ads, Tokopedia Ads<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Spreadsheet / Ms. Office (Word, Excel, PPT)<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Accurate<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Copywriting<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Korespondensi & Filling Dokumen<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Mengetik cepat 10 jari<span class="hidden">[cite: 3]</span></span>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div data-aos="fade-left" class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="text-emerald-600 bg-emerald-100 p-2 rounded-lg">💡</span> Soft Skills
+                    </h3>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-4 py-2 bg-emerald-50 border border-emerald-100 text-emerald-700 rounded-lg text-sm font-bold">Kepemimpinan<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Pemecahan Masalah<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Perhatian Terhadap Detail<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Kerjasama Tim<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Disiplin<span class="hidden">[cite: 3]</span></span>
+                        <span class="px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg text-sm font-medium">Inisiatif<span class="hidden">[cite: 3]</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan & Proyek -->
+    <section id="pendidikan" class="py-24 bg-slate-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Kolom Proyek Khusus -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-extrabold mb-8 text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="text-brand-600">🚀</span> Pengalaman Proyek
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 transition-colors">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 block">Februari - Mei 2026</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Ketua Pelaksana Grand Opening Store Hijrah Food</h3>
+                            <p class="text-sm text-slate-600 mb-3">Bertanggung jawab mengeksekusi operasional pembukaan cabang secara penuh di lokasi strategis:</p>
+                            <ul class="text-sm text-slate-700 font-medium space-y-1 ml-4 list-disc marker:text-brand-500">
+                                <li>Taman Kopo Indah, Bandung (14-15 Februari 2026)<span class="hidden">[cite: 3]</span></li>
+                                <li>Buah Batu, Bandung (1-2 Mei 2026)<span class="hidden">[cite: 3]</span></li>
+                                <li>Cinere, Depok (9-10 Mei 2026)<span class="hidden">[cite: 3]</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 transition-colors">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 block">Jan - Maret 2021</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Admin Distribusi Bantuan Sosial Tunai (Bank DKI)</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Mengklasifikasikan data nasabah, memproses pembuatan ±150 rekening/hari selama 3 bulan, memeriksa berkas pembukaan rekening, dan memberikan penyuluhan bantuan sosial kepada penerima<span class="hidden">[cite: 3]</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Pendidikan & Pelatihan -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-extrabold mb-8 text-slate-900 tracking-tight flex items-center gap-3">
+                        <span class="text-brand-600">🎓</span> Pendidikan & Pelatihan
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Universitas -->
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 transition-colors">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 block">2022 - Sekarang</span>
+                            <h3 class="font-bold text-lg text-slate-900">Universitas Terbuka</h3>
+                            <p class="text-brand-600 font-medium text-sm mb-2">Sarjana (S1) Sistem Informasi</p>
+                            <span class="inline-block px-2 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded">IPK 3.43</span><span class="hidden">[cite: 3]</span>
+                        </div>
+                        
+                        <!-- SMK -->
+                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:border-brand-300 transition-colors">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1 block">2016 - 2019</span>
+                            <h3 class="font-bold text-lg text-slate-900">SMKN 43 Jakarta</h3>
+                            <p class="text-slate-600 font-medium text-sm">Administrasi Perkantoran<span class="hidden">[cite: 3]</span></p>
+                        </div>
+
+                        <!-- Pelatihan -->
+                        <div class="mt-8 pt-6 border-t border-slate-200">
+                            <h4 class="font-bold text-slate-900 mb-4">Sertifikasi & Pelatihan</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-sm font-bold">24</div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-800">Coding Studio <span class="hidden">[cite: 3]</span></p>
+                                        <p class="text-xs text-slate-500">Fundamental Excel (2024)</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 text-sm font-bold">20</div>
+                                    <div>
+                                        <p class="text-sm font-bold text-slate-800">Skill Academy <span class="hidden">[cite: 3]</span></p>
+                                        <p class="text-xs text-slate-500">Digital Marketing untuk Bisnis (2020)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-24 bg-slate-900 text-white px-6 text-center">
+        <div class="max-w-3xl mx-auto" data-aos="zoom-in" data-aos-duration="800">
+            <h2 class="text-4xl font-extrabold mb-6 tracking-tight">Mari Berkolaborasi</h2>
+            <p class="text-slate-400 mb-10 text-lg leading-relaxed max-w-xl mx-auto">
+                Siap untuk mengoptimalkan strategi periklanan marketplace dan merapikan operasional data di perusahaan Anda? Hubungi saya sekarang.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:bayuakbar123@gmail.com" class="bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-brand-500/40">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                    bayuakbar123@gmail.com
+                </a>
+                <a href="https://wa.me/6282169776828" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-3 transition-all shadow-lg hover:shadow-emerald-500/40">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                    0821 6977 6828
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 text-center py-8 text-sm font-medium">
+        <p>&copy; 2026 Bayu Akbar. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 80,
+      });
+    </script>
+</body>
+</html>
