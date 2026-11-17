@@ -9,6 +9,8 @@ if exist "%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies
 if errorlevel 1 goto :failed
 node --check script.js
 if errorlevel 1 goto :failed
+node --check theme.js
+if errorlevel 1 goto :failed
 git diff --check
 if errorlevel 1 goto :failed
 
