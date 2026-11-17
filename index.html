@@ -23,10 +23,38 @@
     <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="refinements.css">
+    <link rel="stylesheet" href="spotlight.css">
+    <script src="intro.js" defer></script>
     <script src="script.js" defer>
     </script>
   </head>
   <body>
+    <dialog id="spotlight-intro" class="spotlight-dialog" aria-labelledby="intro-title" aria-describedby="intro-description">
+      <div class="intro-chrome">
+        <span class="intro-logo" aria-hidden="true">BA<span>.</span></span>
+        <span class="intro-chrome-label">PROFESSIONAL PORTFOLIO</span>
+        <div class="theme-switch" role="group" aria-label="Tema layar pembuka" hidden>
+          <button type="button" data-theme-choice="light" aria-pressed="false"><span aria-hidden="true">☀</span> Terang</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">☾</span> Gelap</button>
+        </div>
+      </div>
+      <div class="intro-stage">
+        <div class="intro-orbit" aria-hidden="true"></div>
+        <div class="intro-content">
+          <p class="intro-eyebrow">BAYU AKBAR · BUSINESS DEVELOPMENT</p>
+          <div class="intro-monogram" aria-hidden="true">BA<span>.</span></div>
+          <h2 id="intro-title">A better process.<br><em>A stronger business.</em></h2>
+          <p id="intro-description">Selamat datang di perjalanan saya dalam<br>bisnis, retail, dan perbaikan proses.</p>
+          <div class="intro-actions">
+            <button type="button" class="intro-enter" id="enter-with-sound" autofocus>Masuk dengan suara <span aria-hidden="true">↗</span></button>
+            <button type="button" class="intro-skip" id="enter-silent">Masuk tanpa suara <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="intro-sound-note">Nada pembuka singkat · Tanpa musik berulang</p>
+        </div>
+      </div>
+      <div class="intro-bottom"><span>JAKARTA, INDONESIA</span><span>Data. Process. Progress.</span></div>
+    </dialog>
+    <audio id="intro-audio" src="assets/spotlight-chime.wav" preload="none" aria-hidden="true"></audio>
     <a class="skip-link" href="#main">Lewati ke konten</a>
     <header class="site-header">
       <div class="container nav-shell">
@@ -623,6 +651,7 @@
             <a class="wordmark" href="#home" aria-label="Kembali ke beranda">BA<span>.</span>
             </a>
             <p>© <span id="copyright-year">2026</span> Bayu Akbar</p>
+            <button type="button" class="intro-replay" id="intro-replay" hidden>Lihat pembuka <span aria-hidden="true">↺</span></button>
             <a href="#home">Kembali ke atas <span aria-hidden="true">↑</span>
             </a>
           </footer>

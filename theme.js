@@ -26,15 +26,15 @@
     apply();
   });
   document.addEventListener('DOMContentLoaded', () => {
-    const group = document.querySelector('.theme-switch');
-    if (!group) return;
-    group.hidden = false;
-    group.addEventListener('click', (event) => {
-      const button = event.target.closest('[data-theme-choice]');
-      if (!button) return;
-      preference = button.dataset.themeChoice;
-      try { localStorage.setItem(key, preference); } catch { /* Optional persistence. */ }
-      apply();
+    document.querySelectorAll('.theme-switch').forEach((group) => {
+      group.hidden = false;
+      group.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-theme-choice]');
+        if (!button) return;
+        preference = button.dataset.themeChoice;
+        try { localStorage.setItem(key, preference); } catch { /* Optional persistence. */ }
+        apply();
+      });
     });
     apply();
   });

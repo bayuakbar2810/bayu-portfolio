@@ -18,4 +18,5 @@ jobs:
       - run: python scripts/check_site.py
       - run: node --check script.js
       - run: node --check theme.js
+      - run: node --check intro.js
       - run: git diff --check

@@ -1,0 +1,89 @@
+/* Spotlight welcome and a geometrically centered desktop menu. */
+@media (min-width: 961px) {
+  .nav-shell { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 20px; }
+  .nav-tools { justify-self: end; }
+  #navigation { justify-self: center; }
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  .nav-shell { gap: 12px; }
+  #navigation { gap: 12px; }
+  #navigation > a { font-size: 11px; }
+  #navigation > .nav-contact { padding-inline: 8px; }
+}
+.intro-open, .intro-open body { overflow: hidden; }
+dialog.spotlight-dialog {
+  width: 100%; max-width: none; height: 100dvh; max-height: none;
+  margin: 0; border: 0; border-radius: 0; padding: 0;
+  color: var(--ink); background: var(--paper); box-shadow: none;
+  overflow: auto; overscroll-behavior: contain;
+}
+.spotlight-dialog[open] { display: flex; flex-direction: column; }
+.spotlight-dialog::backdrop { background: var(--paper); }
+.intro-chrome {
+  width: min(1160px, calc(100% - 96px)); margin-inline: auto;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  gap: 20px; min-height: 92px; flex-shrink: 0;
+  border-bottom: 1px solid var(--line);
+}
+.intro-logo { font-size: 30px; font-weight: 750; letter-spacing: -.08em; }
+.intro-logo span { color: var(--blue); }
+.intro-chrome-label { font-size: 10px; letter-spacing: .18em; color: var(--muted); }
+.intro-chrome .theme-switch { justify-self: end; }
+.intro-stage { flex: 1 0 auto; min-height: 550px; display: grid; place-items: center; position: relative; isolation: isolate; padding: 50px 24px; }
+.intro-content { text-align: center; max-width: 800px; position: relative; }
+.intro-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .19em; color: var(--muted); }
+.intro-monogram { font-size: clamp(84px, 10vw, 130px); letter-spacing: -.09em; font-weight: 650; line-height: 1.1; margin: 24px 0 22px; }
+.intro-monogram span { color: var(--blue); }
+#intro-title { font-size: clamp(36px, 5vw, 64px); line-height: 1.1; letter-spacing: -.055em; font-weight: 550; }
+#intro-title em { color: var(--blue); }
+#intro-description { color: var(--muted); font-size: 15px; line-height: 1.9; margin: 24px 0 30px; }
+.intro-actions { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.intro-enter { display: inline-flex; align-items: center; justify-content: center; gap: 30px; padding: 15px 23px; border-radius: 10px; min-height: 50px; background: var(--button-bg); color: var(--button-text); font-size: 13px; font-weight: 600; transition: transform .2s ease, box-shadow .2s ease; }
+.intro-enter:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.intro-enter span { font-size: 20px; }
+.intro-skip { display: inline-flex; align-items: center; justify-content: center; gap: 16px; background: transparent; color: var(--muted); padding: 14px 12px; min-height: 48px; font-size: 13px; }
+.intro-skip:hover { color: var(--blue); }
+.intro-sound-note { color: var(--muted); font-size: 11px; margin-top: 20px; }
+.intro-bottom { width: min(1160px, calc(100% - 96px)); margin-inline: auto; display: flex; justify-content: space-between; gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); font-size: 10px; letter-spacing: .1em; color: var(--muted); flex-shrink: 0; }
+.intro-orbit { position: absolute; width: min(620px, 92vw); aspect-ratio: 1; z-index: -1; border-radius: 50%; pointer-events: none; background: radial-gradient(ellipse, color-mix(in srgb, var(--blue) 16%, transparent), transparent 70%); }
+.spotlight-dialog[open] .intro-orbit { animation: spotlight-halo 1.3s ease-out both; }
+.spotlight-dialog[open] .intro-monogram { animation: spotlight-mark .8s cubic-bezier(.2,.7,.3,1) both; }
+.spotlight-dialog[open] .intro-eyebrow { animation: spotlight-rise .65s .05s both; }
+.spotlight-dialog[open] #intro-title { animation: spotlight-rise .75s .12s both; }
+.spotlight-dialog[open] #intro-description { animation: spotlight-rise .75s .22s both; }
+.spotlight-dialog[open] .intro-actions, .spotlight-dialog[open] .intro-sound-note { animation: spotlight-rise .7s .3s both; }
+.spotlight-dialog.is-leaving { animation: spotlight-exit .52s cubic-bezier(.4,0,.2,1) both; pointer-events: none; }
+.intro-arrived .hero-copy { animation: spotlight-rise .7s .05s both; }
+.intro-arrived .portrait-card { animation: spotlight-rise .85s .12s both; }
+.intro-replay { color: var(--on-dark-muted); background: transparent; font-size: 11px; display: inline-flex; gap: 12px; min-height: 44px; align-items: center; padding: 0; }
+.intro-replay:hover { color: var(--on-dark-accent); }
+#hero-title:focus { outline: none; }
+@keyframes spotlight-rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spotlight-mark { from { opacity: 0; transform: translateY(14px) scale(.9); filter: blur(5px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+@keyframes spotlight-halo { from { opacity: 0; transform: scale(.8); } to { opacity: 1; transform: scale(1); } }
+@keyframes spotlight-exit { to { opacity: 0; transform: translateY(-10px) scale(1.015); } }
+@media (max-width: 760px) {
+  .intro-chrome { width: calc(100% - 48px); grid-template-columns: 1fr auto; min-height: 78px; }
+  .intro-chrome-label { display: none; }
+  .intro-bottom { width: calc(100% - 48px); font-size: 9px; letter-spacing: .04em; }
+  .intro-stage { min-height: 530px; padding-block: 36px; }
+  .intro-eyebrow { font-size: 9px; letter-spacing: .12em; }
+  .intro-monogram { margin-block: 22px; }
+  #intro-title { font-size: clamp(34px, 6.5vw, 48px); }
+  #intro-description { font-size: 14px; margin-block: 22px; }
+  .intro-actions { flex-direction: column; gap: 7px; }
+  .intro-enter { min-width: 230px; }
+  .intro-sound-note { font-size: 10px; margin-top: 15px; }
+}
+@media (max-width: 360px) {
+  .intro-chrome, .intro-bottom { width: calc(100% - 36px); }
+  #intro-title { font-size: 32px; }
+  .intro-stage { padding-inline: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spotlight-dialog *, .spotlight-dialog, .intro-arrived .hero-copy, .intro-arrived .portrait-card { animation: none !important; transition: none !important; }
+}
+@media print {
+  .spotlight-dialog, .intro-replay { display: none !important; }
+  .intro-open, .intro-open body { overflow: visible; }
+}
