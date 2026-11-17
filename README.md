@@ -21,8 +21,8 @@ GitHub Actions menjalankan pemeriksaan statis saat push dan pull request.
 - `styles.css`: desain responsif, reduced motion, fokus keyboard, dan tampilan cetak.
 - `refinements.css`: penyempurnaan tata letak dan palet tema terang/gelap.
 - `theme.js`: tema awal sesuai perangkat, pilihan manual, dan penyimpanan preferensi.
-- `spotlight.css` dan `intro.js`: pembuka Spotlight, transisi masuk, pilihan suara, dan navigasi desktop tepat di tengah.
-- `assets/spotlight-chime.wav`: chime orisinal 1,6 detik; hanya diputar setelah klik Masuk dengan suara. Regenerasi dengan `python scripts/generate_intro_sound.py` (tanpa dependency tambahan).
+- `spotlight.css` dan `intro.js`: pembuka Spotlight otomatis, transisi masuk, dan navigasi desktop tepat di tengah.
+- `assets/spotlight-chime.wav`: chime orisinal 1,6 detik; dicoba otomatis ketika pembuka muncul. Regenerasi dengan `python scripts/generate_intro_sound.py` (tanpa dependency tambahan).
 - `script.js`: menu mobile, filter, navigasi aktif, dan dialog gambar.
 - `assets/`: gambar yang diperkecil untuk web. File sumber di root dipertahankan.
 - `scripts/optimize_assets.py`: regenerasi gambar memakai Python dan Pillow (`python -m pip install Pillow`, lalu `python scripts/optimize_assets.py`).
@@ -31,7 +31,7 @@ Metrik Shopee mengikuti laporan tiga bulan yang tersedia; tahunnya tidak tercant
 
 ## Deploy GitHub dan Vercel
 
-Pembuka tampil sekali per sesi tab melalui sessionStorage; tautan langsung ke bagian tertentu melewati pembuka. Escape atau Masuk tanpa suara menutupnya tanpa audio. Tombol Lihat pembuka di footer memungkinkan pemutaran ulang. Jika JavaScript, penyimpanan, atau audio tidak tersedia, konten tetap dapat diakses. Animasi dinonaktifkan untuk prefers-reduced-motion. Tidak ada autoplay atau musik berulang.
+Pembuka muncul otomatis ketika URL utama atau #home dibuka, lalu masuk ke portofolio setelah sekitar 2,4 detik. Tautan langsung ke bagian tertentu melewati pembuka. Escape atau Lewati pembuka menutupnya dan menghentikan suara. Browser dapat menolak autoplay bersuara pada kunjungan pertama; kegagalan audio tidak menghambat transisi. Tombol Lihat pembuka di footer memutar ulang pembuka; klik pengguna biasanya mengizinkan audio. Animasi dinonaktifkan dan waktu tunggu dipersingkat untuk prefers-reduced-motion. Tidak ada musik berulang.
 
 Remote yang digunakan: `https://github.com/bayuakbar2810/bayu-portfolio.git`.
 

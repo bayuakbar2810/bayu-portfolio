@@ -38,12 +38,10 @@ dialog.spotlight-dialog {
 #intro-title em { color: var(--blue); }
 #intro-description { color: var(--muted); font-size: 15px; line-height: 1.9; margin: 24px 0 30px; }
 .intro-actions { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; }
-.intro-enter { display: inline-flex; align-items: center; justify-content: center; gap: 30px; padding: 15px 23px; border-radius: 10px; min-height: 50px; background: var(--button-bg); color: var(--button-text); font-size: 13px; font-weight: 600; transition: transform .2s ease, box-shadow .2s ease; }
-.intro-enter:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
-.intro-enter span { font-size: 20px; }
+.intro-entry-status { color: var(--muted); font-size: 12px; letter-spacing: .04em; }
+.intro-actions { flex-direction: column; gap: 10px; }
 .intro-skip { display: inline-flex; align-items: center; justify-content: center; gap: 16px; background: transparent; color: var(--muted); padding: 14px 12px; min-height: 48px; font-size: 13px; }
 .intro-skip:hover { color: var(--blue); }
-.intro-sound-note { color: var(--muted); font-size: 11px; margin-top: 20px; }
 .intro-bottom { width: min(1160px, calc(100% - 96px)); margin-inline: auto; display: flex; justify-content: space-between; gap: 20px; padding: 22px 0; border-top: 1px solid var(--line); font-size: 10px; letter-spacing: .1em; color: var(--muted); flex-shrink: 0; }
 .intro-orbit { position: absolute; width: min(620px, 92vw); aspect-ratio: 1; z-index: -1; border-radius: 50%; pointer-events: none; background: radial-gradient(ellipse, color-mix(in srgb, var(--blue) 16%, transparent), transparent 70%); }
 .spotlight-dialog[open] .intro-orbit { animation: spotlight-halo 1.3s ease-out both; }
@@ -51,7 +49,7 @@ dialog.spotlight-dialog {
 .spotlight-dialog[open] .intro-eyebrow { animation: spotlight-rise .65s .05s both; }
 .spotlight-dialog[open] #intro-title { animation: spotlight-rise .75s .12s both; }
 .spotlight-dialog[open] #intro-description { animation: spotlight-rise .75s .22s both; }
-.spotlight-dialog[open] .intro-actions, .spotlight-dialog[open] .intro-sound-note { animation: spotlight-rise .7s .3s both; }
+.spotlight-dialog[open] .intro-actions { animation: spotlight-rise .7s .3s both; }
 .spotlight-dialog.is-leaving { animation: spotlight-exit .52s cubic-bezier(.4,0,.2,1) both; pointer-events: none; }
 .intro-arrived .hero-copy { animation: spotlight-rise .7s .05s both; }
 .intro-arrived .portrait-card { animation: spotlight-rise .85s .12s both; }
@@ -72,8 +70,6 @@ dialog.spotlight-dialog {
   #intro-title { font-size: clamp(34px, 6.5vw, 48px); }
   #intro-description { font-size: 14px; margin-block: 22px; }
   .intro-actions { flex-direction: column; gap: 7px; }
-  .intro-enter { min-width: 230px; }
-  .intro-sound-note { font-size: 10px; margin-top: 15px; }
 }
 @media (max-width: 360px) {
   .intro-chrome, .intro-bottom { width: calc(100% - 36px); }
