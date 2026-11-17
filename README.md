@@ -31,7 +31,7 @@ Metrik Shopee mengikuti laporan tiga bulan yang tersedia; tahunnya tidak tercant
 
 ## Deploy GitHub dan Vercel
 
-Pembuka muncul otomatis ketika URL utama atau #home dibuka, lalu masuk ke portofolio setelah sekitar 2,4 detik. Tautan langsung ke bagian tertentu melewati pembuka. Escape atau Lewati pembuka menutupnya dan menghentikan suara. Browser dapat menolak autoplay bersuara pada kunjungan pertama; kegagalan audio tidak menghambat transisi. Tombol Lihat pembuka di footer memutar ulang pembuka; klik pengguna biasanya mengizinkan audio. Animasi dinonaktifkan dan waktu tunggu dipersingkat untuk prefers-reduced-motion. Tidak ada musik berulang.
+Pembuka muncul otomatis ketika URL utama atau #home dibuka, lalu masuk ke portofolio setelah sekitar 2,4 detik jika autoplay diizinkan. Ketika browser menolak autoplay dengan NotAllowedError, pembuka menunggu satu klik/ketukan nyata (atau Enter pada tombol Ketuk untuk masuk), lalu memutar chime dan meneruskan transisi. Klik kontrol tema tidak memicu suara. Error audio lain tetap meneruskan halaman. Tautan langsung ke bagian tertentu melewati pembuka. Escape atau Lewati pembuka menutupnya dan menghentikan suara. Tombol Lihat pembuka di footer memutar ulang pembuka. Animasi dinonaktifkan dan waktu tunggu dipersingkat untuk prefers-reduced-motion. Tidak ada musik berulang.
 
 Remote yang digunakan: `https://github.com/bayuakbar2810/bayu-portfolio.git`.
 

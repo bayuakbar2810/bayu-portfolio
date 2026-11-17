@@ -6,6 +6,9 @@
   const replay = document.querySelector('#intro-replay');
   const root = document.documentElement;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const status = dialog.querySelector('.intro-entry-status');
+  const unlockButton = document.querySelector('#unlock-intro');
+  let waitingForGesture = false;
   let closing = false;
   let dismissTimer;
   let closeTimer;
@@ -27,19 +30,49 @@
     if (dialog.open) return;
     const currentOpening = ++opening;
     closing = false;
+    waitingForGesture = false;
+    unlockButton.hidden = true;
+    status.textContent = 'Memasuki portofolio…';
     stopSound();
     dialog.classList.remove('is-leaving');
     root.classList.remove('intro-arrived');
     dialog.showModal();
     root.classList.add('intro-open');
-    audio.volume = 0.42;
-    // Best-effort autoplay. Respect the browser's policy; never delay entry
-    // or request permission if first-visit audio is blocked.
+    audio.volume = 0.65;
+    // Autoplay where permitted; otherwise request a real user gesture.
     audio.play().then(() => {
       if (!dialog.open || currentOpening !== opening) audio.pause();
-    }).catch(() => { /* The animation continues silently when autoplay is denied. */ });
+    }).catch((error) => {
+      if (!dialog.open || closing || currentOpening !== opening) return;
+      if (error.name !== 'NotAllowedError') return;
+      window.clearTimeout(dismissTimer);
+      waitingForGesture = true;
+      status.textContent = 'Selamat datang. Ketuk atau klik layar untuk melanjutkan.';
+      unlockButton.hidden = false;
+      unlockButton.focus({ preventScroll: true });
+    });
     dismissTimer = window.setTimeout(() => enter(), reduced.matches ? 400 : 1900);
   };
+  const unlock = (event) => {
+    if (!event.isTrusted || !waitingForGesture || closing || !dialog.open) return;
+    if (event.target.closest('.theme-switch, #skip-intro')) return;
+    waitingForGesture = false;
+    unlockButton.hidden = true;
+    status.textContent = 'Memasuki portofolio…';
+    const currentOpening = opening;
+    audio.currentTime = 0;
+    audio.play().then(() => {
+      if (!dialog.open || currentOpening !== opening) { audio.pause(); return; }
+      dismissTimer = window.setTimeout(() => enter(), reduced.matches ? 350 : 950);
+    }).catch(() => { enter(); });
+  };
+  dialog.addEventListener('click', unlock);
+  dialog.addEventListener('keydown', (event) => {
+    if ((event.key === 'Enter' || event.key === ' ') && event.target === unlockButton) {
+      event.preventDefault();
+      unlock(event);
+    }
+  });
   dialog.addEventListener('cancel', () => { stopSound(); });
   dialog.addEventListener('close', () => {
     window.clearTimeout(dismissTimer);
@@ -47,6 +80,7 @@
     root.classList.remove('intro-open');
     dialog.classList.remove('is-leaving');
     closing = false;
+    waitingForGesture = false;
     window.scrollTo({ top: 0, behavior: 'instant' });
     root.classList.add('intro-arrived');
     const title = document.querySelector('#hero-title');
